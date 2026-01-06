@@ -1,0 +1,13 @@
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\bin\Debug\net8.0\GymAngel.Domain.deps.json
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\bin\Debug\net8.0\GymAngel.Domain.dll
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\bin\Debug\net8.0\GymAngel.Domain.pdb
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\GymAngel.Domain.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\GymAngel.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\GymAngel.Domain.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\GymAngel.Domain.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\GymAngel.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\GymAngel.Domain.sourcelink.json
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\GymAngel.Domain.dll
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\refint\GymAngel.Domain.dll
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\GymAngel.Domain.pdb
+C:\Users\ADMIN\Desktop\gym-angle\gym-angel\GymAngel.Domain\obj\Debug\net8.0\ref\GymAngel.Domain.dll
