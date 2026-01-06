@@ -17,6 +17,658 @@
       "PackagePath": "staticwebassets\\about.html"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\404.html",
+      "PackagePath": "staticwebassets\\admin\\404.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\alerts.html",
+      "PackagePath": "staticwebassets\\admin\\alerts.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\avatars.html",
+      "PackagePath": "staticwebassets\\admin\\avatars.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\badge.html",
+      "PackagePath": "staticwebassets\\admin\\badge.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\bar-chart.html",
+      "PackagePath": "staticwebassets\\admin\\bar-chart.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\basic-tables.html",
+      "PackagePath": "staticwebassets\\admin\\basic-tables.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\blank.html",
+      "PackagePath": "staticwebassets\\admin\\blank.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\buttons.html",
+      "PackagePath": "staticwebassets\\admin\\buttons.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\calendar.html",
+      "PackagePath": "staticwebassets\\admin\\calendar.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\form-elements.html",
+      "PackagePath": "staticwebassets\\admin\\form-elements.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images.html",
+      "PackagePath": "staticwebassets\\admin\\images.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-01.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-01.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-02.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-02.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-03.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-03.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-04.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-04.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-05.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-05.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-06.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-06.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-07.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-07.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-08.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-08.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-09.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-09.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-10.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-10.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-11.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-11.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-12.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-12.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-13.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-13.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-14.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-14.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\brand\\brand-15.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brand\\brand-15.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\country\\country-01.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\country\\country-01.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\country\\country-02.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\country\\country-02.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\country\\country-03.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\country\\country-03.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\country\\country-04.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\country\\country-04.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\country\\country-05.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\country\\country-05.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\country\\country-06.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\country\\country-06.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\country\\country-07.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\country\\country-07.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\country\\country-08.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\country\\country-08.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\error\\404-dark.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\error\\404-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\error\\404.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\error\\404.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\admin\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\grid-image\\image-01.png",
+      "PackagePath": "staticwebassets\\admin\\images\\grid-image\\image-01.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\grid-image\\image-02.png",
+      "PackagePath": "staticwebassets\\admin\\images\\grid-image\\image-02.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\grid-image\\image-03.png",
+      "PackagePath": "staticwebassets\\admin\\images\\grid-image\\image-03.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\grid-image\\image-04.png",
+      "PackagePath": "staticwebassets\\admin\\images\\grid-image\\image-04.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\grid-image\\image-05.png",
+      "PackagePath": "staticwebassets\\admin\\images\\grid-image\\image-05.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\grid-image\\image-06.png",
+      "PackagePath": "staticwebassets\\admin\\images\\grid-image\\image-06.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\icons\\file-image-dark.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\icons\\file-image-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\icons\\file-image.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\icons\\file-image.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\icons\\file-pdf-dark.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\icons\\file-pdf-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\icons\\file-pdf.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\icons\\file-pdf.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\icons\\file-video-dark.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\icons\\file-video-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\icons\\file-video.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\icons\\file-video.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\logo\\auth-logo.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\logo\\auth-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\logo\\logo-dark.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\logo\\logo-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\logo\\logo-icon.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\logo\\logo-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\logo\\logo.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\logo\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\product\\product-01.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\product-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\product\\product-02.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\product-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\product\\product-03.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\product-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\product\\product-04.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\product-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\product\\product-05.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\product-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\shape\\grid-01.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\shape\\grid-01.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\owner.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\owner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-01.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-02.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-03.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-04.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-05.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-06.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-07.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-08.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-09.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-10.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-11.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-12.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-13.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-14.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-15.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-16.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-17.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-18.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-19.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-20.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-21.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-22.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-23.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-24.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-25.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-26.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-27.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-28.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-29.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-30.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-31.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-32.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-32.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-33.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-34.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-35.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-35.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-36.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-36.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\user\\user-37.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-37.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\video-thumb\\thumb-16.png",
+      "PackagePath": "staticwebassets\\admin\\images\\video-thumb\\thumb-16.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\images\\video-thumb\\youtube-icon-84.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\video-thumb\\youtube-icon-84.svg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\index.html",
+      "PackagePath": "staticwebassets\\admin\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\js\\components\\calendar-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\components\\calendar-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\js\\components\\charts\\chart-01.js",
+      "PackagePath": "staticwebassets\\admin\\js\\components\\charts\\chart-01.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\js\\components\\charts\\chart-02.js",
+      "PackagePath": "staticwebassets\\admin\\js\\components\\charts\\chart-02.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\js\\components\\charts\\chart-03.js",
+      "PackagePath": "staticwebassets\\admin\\js\\components\\charts\\chart-03.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\js\\components\\image-resize.js",
+      "PackagePath": "staticwebassets\\admin\\js\\components\\image-resize.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\js\\components\\map-01.js",
+      "PackagePath": "staticwebassets\\admin\\js\\components\\map-01.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\js\\index.js",
+      "PackagePath": "staticwebassets\\admin\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\line-chart.html",
+      "PackagePath": "staticwebassets\\admin\\line-chart.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\alert\\alert-error.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\alert\\alert-error.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\alert\\alert-info.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\alert\\alert-info.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\alert\\alert-success.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\alert\\alert-success.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\alert\\alert-warning.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\alert\\alert-warning.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\avatar\\avatar-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\avatar\\avatar-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\avatar\\avatar-02.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\avatar\\avatar-02.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\avatar\\avatar-03.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\avatar\\avatar-03.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\avatar\\avatar-04.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\avatar\\avatar-04.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\badge\\badge-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\badge\\badge-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\badge\\badge-02.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\badge\\badge-02.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\badge\\badge-03.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\badge\\badge-03.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\badge\\badge-04.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\badge\\badge-04.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\badge\\badge-05.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\badge\\badge-05.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\badge\\badge-06.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\badge\\badge-06.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\breadcrumb.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\breadcrumb.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\buttons\\button-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\buttons\\button-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\buttons\\button-02.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\buttons\\button-02.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\buttons\\button-03.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\buttons\\button-03.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\buttons\\button-04.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\buttons\\button-04.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\buttons\\button-05.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\buttons\\button-05.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\buttons\\button-06.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\buttons\\button-06.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\calendar-event-modal.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\calendar-event-modal.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\chart\\chart-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\chart\\chart-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\chart\\chart-02.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\chart\\chart-02.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\chart\\chart-03.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\chart\\chart-03.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\common-grid-shape.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\common-grid-shape.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\common-social-links.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\common-social-links.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\datepicker.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\datepicker.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\grid-image\\image-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\grid-image\\image-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\grid-image\\image-02.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\grid-image\\image-02.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\grid-image\\image-03.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\grid-image\\image-03.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\header.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\header.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\map-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\map-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\media-card.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\media-card.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\metric-group\\metric-group-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\metric-group\\metric-group-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\overlay.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\overlay.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\preloader.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\preloader.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\profile\\profile-address-modal.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\profile\\profile-address-modal.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\profile\\profile-info-modal.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\profile\\profile-info-modal.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\sidebar.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\sidebar.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\table\\table-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\table\\table-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\table\\table-06.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\table\\table-06.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\top-card-group.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\top-card-group.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\upcoming-schedule.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\upcoming-schedule.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\video\\video-01.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\video\\video-01.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\video\\video-02.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\video\\video-02.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\video\\video-03.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\video\\video-03.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\video\\video-04.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\video\\video-04.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\partials\\watchlist.html",
+      "PackagePath": "staticwebassets\\admin\\partials\\watchlist.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\profile.html",
+      "PackagePath": "staticwebassets\\admin\\profile.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\sidebar.html",
+      "PackagePath": "staticwebassets\\admin\\sidebar.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\signin.html",
+      "PackagePath": "staticwebassets\\admin\\signin.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\signup.html",
+      "PackagePath": "staticwebassets\\admin\\signup.html"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\admin\\videos.html",
+      "PackagePath": "staticwebassets\\admin\\videos.html"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\contact.html",
       "PackagePath": "staticwebassets\\contact.html"
     },
@@ -257,14 +909,6 @@
       "PackagePath": "staticwebassets\\lib\\animate\\animate.min.css"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\easing\\easing.js",
-      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\easing\\easing.min.js",
-      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\lightbox\\css\\lightbox.css",
       "PackagePath": "staticwebassets\\lib\\lightbox\\css\\lightbox.css"
     },
@@ -275,10 +919,6 @@
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\lightbox\\images\\close.png",
       "PackagePath": "staticwebassets\\lib\\lightbox\\images\\close.png"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\lightbox\\images\\loading.gif",
-      "PackagePath": "staticwebassets\\lib\\lightbox\\images\\loading.gif"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\lightbox\\images\\next.png",
@@ -305,18 +945,6 @@
       "PackagePath": "staticwebassets\\lib\\owlcarousel"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
-      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
-      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
-      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
     },
@@ -333,10 +961,6 @@
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
-      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
     },
@@ -349,16 +973,8 @@
       "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\waypoints\\waypoints.min.js",
-      "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\wow\\wow.js",
       "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\lib\\wow\\wow.min.js",
-      "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\modeling-agency-website-template.jpg",
@@ -373,10 +989,6 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_accordion.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_accordion.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_alert.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_alert.scss"
     },
@@ -389,22 +1001,6 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_breadcrumb.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_button-group.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_button-group.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_buttons.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_buttons.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_card.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_card.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_carousel.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_carousel.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_close.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_close.scss"
     },
@@ -413,16 +1009,8 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_containers.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_dropdown.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_dropdown.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_forms.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_forms.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_functions.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_functions.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_grid.scss",
@@ -437,24 +1025,8 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_images.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_list-group.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_list-group.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_mixins.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_mixins.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_modal.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_modal.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_nav.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_nav.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_navbar.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_navbar.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_offcanvas.scss",
@@ -465,16 +1037,8 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_pagination.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_popover.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_popover.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_progress.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_progress.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_reboot.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_reboot.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_root.scss",
@@ -485,16 +1049,8 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_spinners.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_tables.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tables.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_toasts.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_toasts.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_tooltip.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tooltip.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\_transitions.scss",
@@ -533,28 +1089,12 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\forms\\_labels.scss",
@@ -605,14 +1145,6 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
     },
@@ -633,16 +1165,8 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_image.scss",
@@ -681,20 +1205,12 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
-    },
-    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_api.scss",
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_api.scss"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
-      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\gym-angle\\gym-angel\\GymAngel.Frontend\\wwwroot\\service.html",
