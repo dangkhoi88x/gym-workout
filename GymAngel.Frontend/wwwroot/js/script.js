@@ -47,15 +47,9 @@ class ModernBrutalistLoginForm {
 
     validateEmail() {
         const email = this.emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!email) {
-            this.showError('email', 'Email address is required');
-            return false;
-        }
-
-        if (!emailRegex.test(email)) {
-            this.showError('email', 'Please enter a valid email address');
+            this.showError('email', 'Email or username is required');
             return false;
         }
 
@@ -112,14 +106,40 @@ class ModernBrutalistLoginForm {
 
         this.setLoading(true);
 
-        try {
-            // Simulate authentication
-            await new Promise(resolve => setTimeout(resolve, 2000));
+        // Build request body matching LoginDTO on backend
+        const requestBody = {
+            UsernameOrEmail: this.emailInput.value.trim(),
+            Password: this.passwordInput.value
+        };
 
-            // Show success
-            this.showSuccess();
+        try {
+            const apiBase = window.__ENV__?.API_BASE || '';
+            const res = await fetch(`${apiBase}/api/auth/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestBody)
+            });
+
+            const data = await res.json();
+
+            if (res.ok && data.token) {
+                // Save token to localStorage
+                localStorage.setItem('ga_token', data.token);
+
+                // Show success animation
+                this.showSuccess();
+
+                // Redirect to home page after success animation
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
+            } else {
+                // Handle error from API
+                const errorMsg = data.message || data.error || 'Login failed';
+                this.showError('password', errorMsg);
+            }
         } catch (error) {
-            this.showError('password', 'Authentication failed. Please try again.');
+            this.showError('password', `Network error: ${error.message}`);
         } finally {
             this.setLoading(false);
         }
@@ -135,7 +155,9 @@ class ModernBrutalistLoginForm {
         try {
             await new Promise(resolve => setTimeout(resolve, 1500));
             console.log(`Redirecting to ${provider} authentication...`);
+            // TODO: Implement social login
             // window.location.href = `/auth/${provider.toLowerCase()}`;
+            alert(`${provider} login is not yet implemented`);
         } catch (error) {
             console.error(`${provider} authentication failed: ${error.message}`);
         } finally {
@@ -169,12 +191,6 @@ class ModernBrutalistLoginForm {
             this.successMessage.classList.add('show');
 
         }, 300);
-
-        // Redirect after success display
-        setTimeout(() => {
-            console.log('Redirecting to dashboard...');
-            // window.location.href = '/dashboard';
-        }, 3000);
     }
 }
 
