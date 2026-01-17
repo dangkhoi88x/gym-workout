@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GymAngel.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1f5f5d2fa55a419ffc1531351926cc7eeb954e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16fff6a298485346a0ce9c1b963003b4172fb452")]
 [assembly: System.Reflection.AssemblyProductAttribute("GymAngel.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GymAngel.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

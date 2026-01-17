@@ -50,13 +50,25 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<EmailService>();
 
+// Cart Services
+builder.Services.AddScoped<GymAngel.Data.Repositories.ICartRepository, GymAngel.Data.Repositories.CartRepository>();
+builder.Services.AddScoped<GymAngel.Business.Services.Cart.ICartService, GymAngel.Business.Services.Cart.CartService>();
+
+// Order Services
+builder.Services.AddScoped<GymAngel.Data.Repositories.IOrderRepository, GymAngel.Data.Repositories.OrderRepository>();
+builder.Services.AddScoped<GymAngel.Business.Services.Order.IOrderService, GymAngel.Business.Services.Order.OrderService>();
+
+// Membership Services
+builder.Services.AddScoped<GymAngel.Data.Repositories.IMembershipRepository, GymAngel.Data.Repositories.MembershipRepository>();
+builder.Services.AddScoped<GymAngel.Business.Services.Membership.IMembershipService, GymAngel.Business.Services.Membership.MembershipService>();
+
 // 5️⃣ CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000", "http://localhost:4200","http://localhost:5034",  "https://localhost:5034",  "http://127.0.0.1:5500", "http://localhost:5500", "http://localhost:8080")
+            policy.WithOrigins("http://localhost:3000", "http://localhost:4200","http://localhost:5034", "https://localhost:5034", "http://127.0.0.1:5500", "http://localhost:5500", "http://localhost:8080", "http://frontend:5034", "http://gymangel-frontend:5034")
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -69,13 +81,17 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// 7️⃣ Seed Data
+// 7️⃣ Auto-migrate & Seed Data
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    
+    // Auto-migrate database
+    await context.Database.MigrateAsync();
+    
     var userManager = services.GetRequiredService<UserManager<User>>();
     var roleManager = services.GetRequiredService<RoleManager<Role>>();
-    var context = services.GetRequiredService<ApplicationDbContext>();
     await ApplicationDbContextSeed.SeedAsync(userManager, roleManager, context);
 }
 

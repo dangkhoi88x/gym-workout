@@ -15,6 +15,10 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, int>
     public DbSet<CartItem> CartItems { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
+    public DbSet<DiscountCode> DiscountCodes { get; set; }
+    public DbSet<MembershipPlan> MembershipPlans { get; set; }
+    public DbSet<MembershipTransaction> MembershipTransactions { get; set; }
+    public DbSet<MembershipNotification> MembershipNotifications { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -56,10 +60,50 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, int>
         builder.Entity<Order>()
             .Property(o => o.TotalAmount)
             .HasPrecision(18, 2);
+        
+        builder.Entity<Order>()
+            .Property(o => o.SubtotalAmount)
+            .HasPrecision(18, 2);
+        
+        builder.Entity<Order>()
+            .Property(o => o.DiscountAmount)
+            .HasPrecision(18, 2);
 
         // OrderItem
         builder.Entity<OrderItem>()
             .Property(oi => oi.UnitPrice)
             .HasPrecision(18, 2);
+        
+        builder.Entity<DiscountCode>()
+            .Property(dc => dc.DiscountValue)
+            .HasPrecision(18, 2);
+        
+        builder.Entity<DiscountCode>()
+            .Property(dc => dc.MinimumOrderAmount)
+            .HasPrecision(18, 2);
+        
+        // MembershipPlan
+        builder.Entity<MembershipPlan>()
+            .Property(mp => mp.Price)
+            .HasPrecision(18, 2);
+        
+        builder.Entity<MembershipPlan>()
+            .Property(mp => mp.OriginalPrice)
+            .HasPrecision(18, 2);
+        
+        // MembershipTransaction
+        builder.Entity<MembershipTransaction>()
+            .Property(mt => mt.Amount)
+            .HasPrecision(18, 2);
+        
+        builder.Entity<MembershipTransaction>()
+            .HasOne(mt => mt.User)
+            .WithMany()
+            .HasForeignKey(mt => mt.UserId);
+        
+        builder.Entity<MembershipTransaction>()
+            .HasOne(mt => mt.MembershipPlan)
+            .WithMany(mp => mp.MembershipTransactions)
+            .HasForeignKey(mt => mt.MembershipPlanId);
     }
 }

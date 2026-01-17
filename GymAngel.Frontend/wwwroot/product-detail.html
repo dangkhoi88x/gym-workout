@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Product Detail - GYM ANGEL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Cart Global Styles -->
+    <link href="css/style-cart-global.css" rel="stylesheet">
+
+    <!-- Product Detail CSS -->
+    <link href="css/style-product-detail.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <h2 class="mb-0 text-primary text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>Gym Angel</h2>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="products.html" class="nav-item nav-link active">Products</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex">
+                    <a class="btn btn-sm-square btn-outline-primary border-2 ms-1" href="signin.html"><i
+                            class="fa fa-user"></i></a>
+                    <a class="btn btn-sm-square btn-outline-primary border-2 ms-1" href="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Header End -->
+
+    <!-- Breadcrumb -->
+    <div class="container-fluid bg-secondary py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-body">Home</a></li>
+                    <li class="breadcrumb-item"><a href="products.html" class="text-body">Products</a></li>
+                    <li class="breadcrumb-item active text-primary" id="breadcrumb-product">Loading...</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Product Detail Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div id="product-detail-container">
+                <!-- Product details will be loaded here -->
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading-state" class="text-center py-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="text-white mt-3">Loading product details...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-state" class="text-center py-5 d-none">
+                <i class="fa fa-exclamation-triangle text-warning fa-3x mb-3"></i>
+                <p class="text-white">Product not found or failed to load.</p>
+                <a href="products.html" class="btn btn-primary mt-3">Back to Products</a>
+            </div>
+        </div>
+    </div>
+    <!-- Product Detail End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <a href="index.html">
+                <h1 class="display-4 mb-3 text-white text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>Gym
+                    Angel</h1>
+            </a>
+            <p>&copy; <a class="border-bottom" href="#">Gym Angel</a>, All Right Reserved.</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Environment Config -->
+    <script src="js/env.js"></script>
+
+    <!-- Auth Utilities -->
+    <script src="js/auth.js"></script>
+
+    <!-- Cart API -->
+    <script src="js/cart-api.js"></script>
+
+    <!-- Cart Utilities -->
+    <script src="js/cart-utils.js"></script>
+
+    <!-- Product Detail Script -->
+    <script src="js/script-product-detail.js"></script>
+</body>
+
+</html>

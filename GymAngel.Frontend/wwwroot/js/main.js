@@ -10,10 +10,10 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
-    new WOW().init();
+    try { if (typeof WOW !== 'undefined') { new WOW().init(); } } catch (e) { console.warn('WOW.js not available'); }
 
 
     // Sticky Navbar
@@ -24,8 +24,8 @@
             $('.navbar').removeClass('position-fixed bg-dark shadow-sm');
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -35,7 +35,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'swing'); // Use jQuery built-in easing
         return false;
     });
 
@@ -51,6 +51,6 @@
         dotsData: true,
     });
 
-    
+
 })(jQuery);
 

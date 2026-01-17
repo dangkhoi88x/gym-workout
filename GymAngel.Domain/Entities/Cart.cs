@@ -14,8 +14,12 @@ namespace GymAngel.Domain.Entities
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
+        // Discount
+        public int? DiscountCodeId { get; set; }
+
         // Navigation
         public User User { get; set; } = null!;
         public ICollection<CartItem>? CartItems { get; set; }
+        public DiscountCode? DiscountCode { get; set; }
     }
 }

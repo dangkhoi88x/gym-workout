@@ -16,6 +16,9 @@ function saveToken(token) {
 function getToken() {
     return localStorage.getItem('ga_token');
 }
+function isAuthenticated() {
+    return !!getToken();
+}
 function logout() {
     localStorage.removeItem('ga_token');
     window.location.href = 'signin.html';
@@ -42,9 +45,9 @@ async function handleSignup(e) {
     e.preventDefault();
     const userName = document.getElementById('username').value.trim();
     const fullName = document.getElementById('name').value.trim();
-    const email    = document.getElementById('email').value.trim();
+    const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
-    const confirm  = document.getElementById('confirmPassword').value.trim();
+    const confirm = document.getElementById('confirmPassword').value.trim();
 
     if (!userName || !fullName || !email || !password) return alert('Please fill all required fields.');
     if (password !== confirm) return alert('Passwords do not match');
@@ -65,7 +68,7 @@ async function handleSignup(e) {
 async function handleSignin(e) {
     e.preventDefault();
     const emailOrUser = document.getElementById('email').value.trim();     // bạn đang dùng field "email" trong UI
-    const password    = document.getElementById('password').value.trim();
+    const password = document.getElementById('password').value.trim();
 
     if (!emailOrUser || !password) return alert('Please enter your credentials.');
 
@@ -77,11 +80,49 @@ async function handleSignin(e) {
         // API trả { token: "..." }
         if (!data?.token) throw new Error('No token returned');
         saveToken(data.token);
+
+        // Sync cart from LocalStorage to backend
+        await syncCartAfterLogin();
+
         alert('Login success');
         // Ví dụ: quay về trang chủ
         window.location.href = 'index.html';
     } catch (err) {
         alert(`Login failed: ${err.message}`);
+    }
+}
+
+// ====== Cart Sync After Login ======
+async function syncCartAfterLogin() {
+    try {
+        // Get cart from LocalStorage
+        const localCart = localStorage.getItem('gymangel_cart');
+        if (!localCart) return; // No local cart to sync
+
+        const localItems = JSON.parse(localCart);
+        if (localItems.length === 0) return; // Empty cart
+
+        // Call sync API (will be available from cart-api.js)
+        if (window.CartAPI && window.CartAPI.syncCart) {
+            const syncedCart = await window.CartAPI.syncCart(localItems);
+
+            // Update LocalStorage with synced cart from backend
+            if (syncedCart && syncedCart.items) {
+                const updatedCart = syncedCart.items.map(item => ({
+                    id: item.productId,
+                    name: item.productName,
+                    price: item.unitPrice,
+                    imageUrl: item.productImageUrl,
+                    quantity: item.quantity
+                }));
+                localStorage.setItem('gymangel_cart', JSON.stringify(updatedCart));
+            }
+
+            console.log('Cart synced successfully');
+        }
+    } catch (error) {
+        console.error('Error syncing cart after login:', error);
+        // Don't block login if cart sync fails
     }
 }
 
@@ -106,4 +147,10 @@ async function loadProductsDemo() {
         console.error(e);
     }
 }
+
+// ====== Expose functions globally ======
+window.apiFetch = apiFetch;
+window.getToken = getToken;
+window.isAuthenticated = isAuthenticated;
+window.logout = logout;
 window.loadProductsDemo = loadProductsDemo;

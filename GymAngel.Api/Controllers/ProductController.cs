@@ -21,5 +21,14 @@ namespace GymAngel.Api.Controllers
             var products = await _context.Products.ToListAsync();
             return Ok(products);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProductById(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product == null)
+                return NotFound(new { message = "Product not found" });
+            return Ok(product);
+        }
     }
 }

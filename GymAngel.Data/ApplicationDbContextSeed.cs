@@ -99,10 +99,27 @@ namespace GymAngel.Data
 
                 var order = new Order
                 {
-                    UserId = customer1.Id,
+                    OrderNumber = "ORD-20260101-0001",
+                    UserId = customer1.Id, // Now string from Identity
+                    OrderDate = DateTime.UtcNow,
+                    Status = "Delivered",
+                    
+                    SubtotalAmount = firstProduct.Price * 2,
+                    DiscountAmount = 0,
                     TotalAmount = firstProduct.Price * 2,
+                    
+                    ReceiverName = "Nguyen Van A",
+                    ReceiverPhone = "0123456789",
+                    DeliveryAddress = "123 Street",
+                    City = "Ho Chi Minh",
+                    District = "District 1",
+                    Ward = "Ward 1",
+                    Notes = "Sample order",
+                    
+                    PaymentMethod = "COD",
+                    PaymentStatus = "Paid",
                     CreatedAt = DateTime.UtcNow,
-                    PaymentStatus = "Completed",
+                    
                     OrderItems = new List<OrderItem>
                     {
                         new OrderItem
@@ -116,6 +133,61 @@ namespace GymAngel.Data
                 };
 
                 context.Orders.Add(order);
+                await context.SaveChangesAsync();
+            }
+
+            // 7. Seed Membership Plans
+            if (!context.MembershipPlans.Any())
+            {
+                var plans = new List<MembershipPlan>
+                {
+                    new MembershipPlan
+                    {
+                        Name = "1 Month",
+                        Description = "Perfect for trying out our gym",
+                        DurationMonths = 1,
+                        Price = 500000,
+                        OriginalPrice = 500000,
+                        IsPopular = false,
+                        IsActive = true,
+                        Features = "[\"Full gym access\",\"Basic locker usage\",\"Fitness consultation\"]"
+                    },
+                    new MembershipPlan
+                    {
+                        Name = "3 Months",
+                        Description = "Great value for committed fitness enthusiasts",
+                        DurationMonths = 3,
+                        Price = 1200000,
+                        OriginalPrice = 1500000,
+                        IsPopular = false,
+                        IsActive = true,
+                        Features = "[\"Full gym access\",\"Locker + towel service\",\"1x Personal Training/week\",\"Nutrition consultation\"]"
+                    },
+                    new MembershipPlan
+                    {
+                        Name = "6 Months",
+                        Description = "Most popular choice - Best value!",
+                        DurationMonths = 6,
+                        Price = 2100000,
+                        OriginalPrice = 3000000,
+                        IsPopular = true, // Highlight this plan
+                        IsActive = true,
+                        Features = "[\"Full gym access\",\"Premium locker + towel\",\"2x Personal Training/week\",\"Nutrition & meal planning\",\"Free supplements consultation\",\"Guest passes (2x/month)\"]"
+                    },
+                    new MembershipPlan
+                    {
+                        Name = "12 Months",
+                        Description = "Maximum savings for serious athletes",
+                        DurationMonths = 12,
+                        Price = 3600000,
+                        OriginalPrice = 6000000,
+                        IsPopular = false,
+                        IsActive = true,
+                        Features = "[\"Full gym access\",\"VIP locker + premium towel\",\"Unlimited Personal Training\",\"Advanced nutrition planning\",\"Free supplements (monthly)\",\"Unlimited guest passes\",\"Priority class booking\",\"Free gym merchandise\"]"
+                    }
+                };
+
+                context.MembershipPlans.AddRange(plans);
                 await context.SaveChangesAsync();
             }
         }

@@ -21,7 +21,7 @@
 | ⭐⭐⭐ | **Signin/Signup** | Kết nối với API Auth (login, register) | ⏳ |
 | ⭐⭐⭐ | **Products Page** | Hiển thị danh sách supplements từ API | ⏳ |
 | ⭐⭐ | **Product Detail** | Chi tiết sản phẩm + nút "Add to Cart" | ⏳ |
-| ⭐⭐ | **Cart Page** | Xem giỏ hàng, cập nhật số lượng | ⏳ |
+| ⭐⭐ | **Cart Page** | Xem giỏ hàng, cập nhật số lượng | ✅ |
 
 ### Tasks chi tiết:
 
