@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GymAngel.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16fff6a298485346a0ce9c1b963003b4172fb452")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fcb00a24ccc71c9cca664017cb2401c7aa02ee6")]
 [assembly: System.Reflection.AssemblyProductAttribute("GymAngel.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GymAngel.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

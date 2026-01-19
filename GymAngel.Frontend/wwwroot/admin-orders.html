@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management - GYM ANGEL Admin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+    <nav class="admin-sidebar">
+        <div class="admin-logo">
+            <h2><i class="fa fa-dumbbell"></i> GYM ANGEL</h2>
+            <span class="badge">ADMIN</span>
+        </div>
+        <div class="admin-nav">
+            <a href="admin-dashboard.html" class="admin-nav-item">
+                <i class="fa fa-chart-line"></i><span>Dashboard</span>
+            </a>
+            <a href="admin-products.html" class="admin-nav-item">
+                <i class="fa fa-box"></i><span>Products</span>
+            </a>
+            <a href="admin-orders.html" class="admin-nav-item active">
+                <i class="fa fa-shopping-cart"></i><span>Orders</span>
+            </a>
+            <a href="admin-users.html" class="admin-nav-item">
+                <i class="fa fa-users"></i><span>Users</span>
+            </a>
+            <a href="admin-memberships.html" class="admin-nav-item">
+                <i class="fa fa-id-card"></i><span>Memberships</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="admin-main">
+        <header class="admin-header">
+            <h1><i class="fa fa-shopping-cart"></i> Order Management</h1>
+            <div class="admin-user">
+                <div class="admin-user-info">
+                    <div class="admin-user-name" id="admin-name">Admin</div>
+                    <div class="admin-user-role">Administrator</div>
+                </div>
+                <button class="btn-logout" onclick="AdminUtils.logout()">
+                    <i class="fa fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </header>
+
+        <div class="toolbar">
+            <div class="search-box">
+                <input type="text" id="search-input" class="form-control"
+                    placeholder="Search by order number, customer...">
+            </div>
+            <div class="filter-group">
+                <select id="status-filter" class="form-control">
+                    <option value="">All Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Processing">Processing</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="admin-card">
+            <div class="card-header">
+                <h3 class="card-title">All Orders</h3>
+                <span id="order-count" class="badge badge-info">0 orders</span>
+            </div>
+            <div class="card-body">
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading orders...</p>
+                </div>
+                <table id="orders-table" class="admin-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Items </ <th>
+                            <th>Total</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Order Details Modal -->
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h3 class="modal-title">Order Details</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="order-details"></div>
+            <div class="modal-footer">
+                <button class="btn-admin" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/env.js"></script>
+    <script src="js/admin-utils.js"></script>
+    <script>
+        AdminUtils.requireAuth();
+        document.getElementById('admin-name').textContent = AdminUtils.getEmail() || 'Admin';
+
+        let allOrders = [];
+
+        async function loadOrders() {
+            try {
+                const response = await AdminUtils.apiRequest('/api/orders');
+                if (response.ok) {
+                    allOrders = await response.json();
+                    renderOrders(allOrders);
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('orders-table').style.display = 'table';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                AdminUtils.showToast('Failed to load orders', 'error');
+            }
+        }
+
+        function renderOrders(orders) {
+            const tbody = document.getElementById('orders-tbody');
+            document.getElementById('order-count').textContent = `${orders.length} orders`;
+
+            tbody.innerHTML = orders.map(o => `
+                <tr>
+                    <td><strong>${o.orderNumber || '#' + o.id}</strong></td>
+                    <td>${o.deliveryName || 'N/A'}<br>
+                        <small style="color: rgba(255,255,255,0.5);">${o.deliveryPhone || ''}</small>
+                    </td>
+                    <td>${AdminUtils.formatDate(o.orderDate)}</td>
+                    <td>${o.orderItems?.length || 0} items</td>
+                    <td><strong>${AdminUtils.formatCurrency(o.totalAmount)}</strong></td>
+                    <td><span class="badge badge-info">${o.paymentMethod}</span></td>
+                    <td>${AdminUtils.getStatusBadge(o.status)}</td>
+                    <td>
+                        <button class="btn-admin btn-sm btn-primary" onclick="viewOrder(${o.id})">
+                            <i class="fa fa-eye"></i>
+                        </button>
+                        ${o.status === 'Pending' ? `
+                            <button class="btn-admin btn-sm btn-success" onclick="updateStatus(${o.id}, 'Processing')">
+                                <i class="fa fa-check"></i>
+                            </button>
+                        ` : ''}
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        async function viewOrder(id) {
+            try {
+                const response = await AdminUtils.apiRequest(`/api/orders/${id}`);
+                if (response.ok) {
+                    const order = await response.json();
+                    showOrderDetails(order);
+                }
+            } catch (error) {
+                AdminUtils.showToast('Failed to load order details', 'error');
+            }
+        }
+
+        function showOrderDetails(order) {
+            const details = document.getElementById('order-details');
+            details.innerHTML = `
+                <div style="margin-bottom: 20px;">
+                    <h4 style="color: #FFD700; margin-bottom: 15px;">Order ${order.orderNumber || '#' + order.id}</h4>
+                    <p><strong>Date:</strong> ${AdminUtils.formatDateTime(order.orderDate)}</p>
+                    <p><strong>Status:</strong> ${AdminUtils.getStatusBadge(order.status)}</p>
+                    <p><strong>Payment:</strong> ${order.paymentMethod} - ${order.paymentStatus}</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h5 style="color: #FFD700; margin-bottom: 10px;">Delivery Information</h5>
+                    <p><strong>Name:</strong> ${order.deliveryName || 'N/A'}</p>
+                    <p><strong>Phone:</strong> ${order.deliveryPhone || 'N/A'}</p>
+                    <p><strong>Address:</strong> ${order.deliveryAddress || 'N/A'}</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h5 style="color: #FFD700; margin-bottom: 10px;">Order Items</h5>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${order.orderItems?.map(item => `
+                                <tr>
+                                    <td>${item.productName || item.product?.name || 'N/A'}</td>
+                                    <td>${AdminUtils.formatCurrency(item.price)}</td>
+                                    <td>${item.quantity}</td>
+                                    <td>${AdminUtils.formatCurrency(item.price * item.quantity)}</td>
+                                </tr>
+                            `).join('') || '<tr><td colspan="4">No items</td></tr>'}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="text-align: right; padding-top: 15px; border-top: 1px solid rgba(255,215,0,0.2);">
+                    <h4 style="color: #FFD700;">Total: ${AdminUtils.formatCurrency(order.totalAmount)}</h4>
+                </div>
+
+                ${order.status !== 'Cancelled' && order.status !== 'Delivered' ? `
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,215,0,0.2);">
+                        <h5 style="margin-bottom: 10px;">Update Status:</h5>
+                        <div style="display: flex; gap: 10px;">
+                            ${order.status === 'Pending' ? '<button class="btn-admin btn-success" onclick="updateStatus(' + order.id + ', \'Processing\')">Mark Processing</button>' : ''}
+                            ${order.status === 'Processing' ? '<button class="btn-admin btn-success" onclick="updateStatus(' + order.id + ', \'Shipped\')">Mark Shipped</button>' : ''}
+                            ${order.status === 'Shipped' ? '<button class="btn-admin btn-success" onclick="updateStatus(' + order.id + ', \'Delivered\')">Mark Delivered</button>' : ''}
+                            <button class="btn-admin btn-danger" onclick="cancelOrder(' + order.id + ')">Cancel Order</button>
+                        </div>
+                    </div>
+                ` : ''}
+            `;
+
+            document.getElementById('order-modal').classList.add('show');
+        }
+
+        async function updateStatus(id, newStatus) {
+            try {
+                const response = await AdminUtils.apiRequest(`/api/orders/${id}/status`, {
+                    method: 'PATCH',
+                    body: JSON.stringify({ status: newStatus })
+                });
+
+                if (response.ok) {
+                    AdminUtils.showToast('Order status updated!', 'success');
+                    closeModal();
+                    loadOrders();
+                }
+            } catch (error) {
+                AdminUtils.showToast('Failed to update status', 'error');
+            }
+        }
+
+        async function cancelOrder(id) {
+            if (!await AdminUtils.confirm('Cancel this order?')) return;
+
+            try {
+                const response = await AdminUtils.apiRequest(`/api/orders/${id}/cancel`, {
+                    method: 'PATCH'
+                });
+
+                if (response.ok) {
+                    AdminUtils.showToast('Order cancelled!', 'success');
+                    closeModal();
+                    loadOrders();
+                }
+            } catch (error) {
+                AdminUtils.showToast('Failed to cancel order', 'error');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('order-modal').classList.remove('show');
+        }
+
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const search = e.target.value.toLowerCase();
+            const filtered = allOrders.filter(o =>
+                (o.orderNumber && o.orderNumber.toLowerCase().includes(search)) ||
+                (o.deliveryName && o.deliveryName.toLowerCase().includes(search)) ||
+                (o.deliveryPhone && o.deliveryPhone.includes(search))
+            );
+            renderOrders(filtered);
+        });
+
+        document.getElementById('status-filter').addEventListener('change', (e) => {
+            const status = e.target.value;
+            const filtered = status ? allOrders.filter(o => o.status === status) : allOrders;
+            renderOrders(filtered);
+        });
+
+        document.addEventListener('DOMContentLoaded', loadOrders);
+    </script>
+</body>
+
+</html>

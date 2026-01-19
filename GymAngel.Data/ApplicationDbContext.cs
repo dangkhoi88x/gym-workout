@@ -19,6 +19,7 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, int>
     public DbSet<MembershipPlan> MembershipPlans { get; set; }
     public DbSet<MembershipTransaction> MembershipTransactions { get; set; }
     public DbSet<MembershipNotification> MembershipNotifications { get; set; }
+    public DbSet<AdminActionLog> AdminActionLogs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

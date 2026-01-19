@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management - GYM ANGEL Admin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+    <!-- Sidebar -->
+    <nav class="admin-sidebar">
+        <div class="admin-logo">
+            <h2><i class="fa fa-dumbbell"></i> GYM ANGEL</h2>
+            <span class="badge">ADMIN</span>
+        </div>
+        <div class="admin-nav">
+            <a href="admin-dashboard.html" class="admin-nav-item">
+                <i class="fa fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="admin-products.html" class="admin-nav-item active">
+                <i class="fa fa-box"></i>
+                <span>Products</span>
+            </a>
+            <a href="admin-orders.html" class="admin-nav-item">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Orders</span>
+            </a>
+            <a href="admin-users.html" class="admin-nav-item">
+                <i class="fa fa-users"></i>
+                <span>Users</span>
+            </a>
+            <a href="admin-memberships.html" class="admin-nav-item">
+                <i class="fa fa-id-card"></i>
+                <span>Memberships</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Header -->
+        <header class="admin-header">
+            <h1><i class="fa fa-box"></i> Product Management</h1>
+            <div class="admin-user">
+                <div class="admin-user-info">
+                    <div class="admin-user-name" id="admin-name">Admin</div>
+                    <div class="admin-user-role">Administrator</div>
+                </div>
+                <button class="btn-logout" onclick="AdminUtils.logout()">
+                    <i class="fa fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </header>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <div class="search-box">
+                <input type="text" id="search-input" class="form-control" placeholder="Search products...">
+            </div>
+            <div class="filter-group">
+                <select id="category-filter" class="form-control">
+                    <option value="">All Categories</option>
+                    <option value="Supplements">Supplements</option>
+                    <option value="Equipment">Equipment</option>
+                    <option value="Apparel">Apparel</option>
+                </select>
+                <button class="btn-admin btn-primary" onclick="showCreateModal()">
+                    <i class="fa fa-plus"></i> New Product
+                </button>
+            </div>
+        </div>
+
+        <!-- Products Table -->
+        <div class="admin-card">
+            <div class="card-header">
+                <h3 class="card-title">All Products</h3>
+                <span id="product-count" class="badge badge-info">0 products</span>
+            </div>
+            <div class="card-body">
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading products...</p>
+                </div>
+                <table id="products-table" class="admin-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-tbody">
+                        <!-- Dynamic content -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Create/Edit Product Modal -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Create Product</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+
+                    <div class="form-group">
+                        <label class="form-label">Product Name *</label>
+                        <input type="text" id="product-name" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea id="product-description" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Category *</label>
+                        <select id="product-category" class="form-control" required>
+                            <option value="Supplements">Supplements</option>
+                            <option value="Equipment">Equipment</option>
+                            <option value="Apparel">Apparel</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Price (VND) *</label>
+                        <input type="number" id="product-price" class="form-control" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Stock Quantity *</label>
+                        <input type="number" id="product-stock" class="form-control" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Image URL</label>
+                        <input type="text" id="product-image" class="form-control" placeholder="https://...">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-admin" onclick="closeModal()">Cancel</button>
+                <button class="btn-admin btn-primary" id="save-btn" onclick="saveProduct()">Save Product</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/env.js"></script>
+    <script src="js/admin-utils.js"></script>
+    <script>
+        AdminUtils.requireAuth();
+        document.getElementById('admin-name').textContent = AdminUtils.getEmail() || 'Admin';
+
+        let allProducts = [];
+
+        async function loadProducts() {
+            try {
+                const response = await AdminUtils.apiRequest('/api/products');
+                if (response.ok) {
+                    allProducts = await response.json();
+                    renderProducts(allProducts);
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('products-table').style.display = 'table';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                AdminUtils.showToast('Failed to load products', 'error');
+            }
+        }
+
+        function renderProducts(products) {
+            const tbody = document.getElementById('products-tbody');
+            document.getElementById('product-count').textContent = `${products.length} products`;
+
+            tbody.innerHTML = products.map(p => `
+                <tr>
+                    <td><strong>#${p.id}</strong></td>
+                    <td><img src="${p.imageUrl || 'img/default-product.jpg'}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;"></td>
+                    <td><strong>${p.name}</strong></td>
+                    <td><span class="badge badge-info">${p.category || 'N/A'}</span></td>
+                    <td>${AdminUtils.formatCurrency(p.price)}</td>
+                    <td>
+                        <span class="badge ${p.stockQuantity < 10 ? 'badge-warning' : 'badge-success'}">
+                            ${p.stockQuantity}
+                        </span>
+                    </td>
+                    <td>${p.stockQuantity > 0 ? '<span class="badge badge-success">In Stock</span>' : '<span class="badge badge-danger">Out of Stock</span>'}</td>
+                    <td>
+                        <button class="btn-admin btn-sm btn-primary" onclick="editProduct(${p.id})">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <button class="btn-admin btn-sm btn-danger" onclick="deleteProduct(${p.id})">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function showCreateModal() {
+            document.getElementById('modal-title').textContent = 'Create Product';
+            document.getElementById('product-form').reset();
+            document.getElementById('product-id').value = '';
+            document.getElementById('product-modal').classList.add('show');
+        }
+
+        async function editProduct(id) {
+            const product = allProducts.find(p => p.id === id);
+            if (!product) return;
+
+            document.getElementById('modal-title').textContent = 'Edit Product';
+            document.getElementById('product-id').value = product.id;
+            document.getElementById('product-name').value = product.name;
+            document.getElementById('product-description').value = product.description || '';
+            document.getElementById('product-category').value = product.category || '';
+            document.getElementById('product-price').value = product.price;
+            document.getElementById('product-stock').value = product.stockQuantity;
+            document.getElementById('product-image').value = product.imageUrl || '';
+            document.getElementById('product-modal').classList.add('show');
+        }
+
+        async function saveProduct() {
+            const id = document.getElementById('product-id').value;
+            const data = {
+                name: document.getElementById('product-name').value,
+                description: document.getElementById('product-description').value,
+                category: document.getElementById('product-category').value,
+                price: parseFloat(document.getElementById('product-price').value),
+                stockQuantity: parseInt(document.getElementById('product-stock').value),
+                imageUrl: document.getElementById('product-image').value
+            };
+
+            const saveBtn = document.getElementById('save-btn');
+            AdminUtils.setLoading(saveBtn, true);
+
+            try {
+                const method = id ? 'PUT' : 'POST';
+                const endpoint = id ? `/api/products/${id}` : '/api/products';
+
+                const response = await AdminUtils.apiRequest(endpoint, {
+                    method,
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    AdminUtils.showToast(id ? 'Product updated!' : 'Product created!', 'success');
+                    closeModal();
+                    loadProducts();
+                } else {
+                    throw new Error('Failed to save product');
+                }
+            } catch (error) {
+                AdminUtils.showToast(error.message, 'error');
+            } finally {
+                AdminUtils.setLoading(saveBtn, false);
+            }
+        }
+
+        async function deleteProduct(id) {
+            if (!await AdminUtils.confirm('Delete this product?')) return;
+
+            try {
+                const response = await AdminUtils.apiRequest(`/api/products/${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (response.ok) {
+                    AdminUtils.showToast('Product deleted!', 'success');
+                    loadProducts();
+                }
+            } catch (error) {
+                AdminUtils.showToast('Failed to delete product', 'error');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.remove('show');
+        }
+
+        // Search & Filter
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const search = e.target.value.toLowerCase();
+            const filtered = allProducts.filter(p =>
+                p.name.toLowerCase().includes(search) ||
+                (p.description && p.description.toLowerCase().includes(search))
+            );
+            renderProducts(filtered);
+        });
+
+        document.getElementById('category-filter').addEventListener('change', (e) => {
+            const category = e.target.value;
+            const filtered = category ? allProducts.filter(p => p.category === category) : allProducts;
+            renderProducts(filtered);
+        });
+
+        document.addEventListener('DOMContentLoaded', loadProducts);
+    </script>
+</body>
+
+</html>

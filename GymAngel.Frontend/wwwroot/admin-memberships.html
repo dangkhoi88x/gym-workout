@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Management - GYM ANGEL Admin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+    <nav class="admin-sidebar">
+        <div class="admin-logo">
+            <h2><i class="fa fa-dumbbell"></i> GYM ANGEL</h2>
+            <span class="badge">ADMIN</span>
+        </div>
+        <div class="admin-nav">
+            <a href="admin-dashboard.html" class="admin-nav-item">
+                <i class="fa fa-chart-line"></i><span>Dashboard</span>
+            </a>
+            <a href="admin-products.html" class="admin-nav-item">
+                <i class="fa fa-box"></i><span>Products</span>
+            </a>
+            <a href="admin-orders.html" class="admin-nav-item">
+                <i class="fa fa-shopping-cart"></i><span>Orders</span>
+            </a>
+            <a href="admin-users.html" class="admin-nav-item">
+                <i class="fa fa-users"></i><span>Users</span>
+            </a>
+            <a href="admin-memberships.html" class="admin-nav-item active">
+                <i class="fa fa-id-card"></i><span>Memberships</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="admin-main">
+        <header class="admin-header">
+            <h1><i class="fa fa-id-card"></i> Membership Management</h1>
+            <div class="admin-user">
+                <div class="admin-user-info">
+                    <div class="admin-user-name" id="admin-name">Admin</div>
+                    <div class="admin-user-role">Administrator</div>
+                </div>
+                <button class="btn-logout" onclick="AdminUtils.logout()">
+                    <i class="fa fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </header>
+
+        <!-- Tabs -->
+        <div style="margin-bottom: 30px; border-bottom: 1px solid rgba(255,215,0,0.2);">
+            <button class="tab-btn active" onclick="switchTab('plans')">
+                <i class="fa fa-list"></i> Membership Plans
+            </button>
+            <button class="tab-btn" onclick="switchTab('subscriptions')">
+                <i class="fa fa-users"></i> Active Subscriptions
+            </button>
+        </div>
+
+        <style>
+            .tab-btn {
+                padding: 12px 30px;
+                background: transparent;
+                border: none;
+                color: rgba(255, 255, 255, 0.6);
+                cursor: pointer;
+                font-size: 1rem;
+                border-bottom: 2px solid transparent;
+                transition: all 0.3s;
+            }
+
+            .tab-btn:hover {
+                color: #FFD700;
+            }
+
+            .tab-btn.active {
+                color: #FFD700;
+                border-bottom-color: #FFD700;
+            }
+
+            .tab-content {
+                display: none;
+            }
+
+            .tab-content.active {
+                display: block;
+            }
+        </style>
+
+        <!-- Plans Tab -->
+        <div id="plans-tab" class="tab-content active">
+            <div style="margin-bottom: 20px; text-align: right;">
+                <button class="btn-admin btn-primary" onclick="showCreatePlanModal()">
+                    <i class="fa fa-plus"></i> New Plan
+                </button>
+            </div>
+
+            <div class="admin-card">
+                <div class="card-header">
+                    <h3 class="card-title">All Membership Plans</h3>
+                    <span id="plan-count" class="badge badge-info">0 plans</span>
+                </div>
+                <div class="card-body">
+                    <div id="loading-plans" class="loading">
+                        <div class="spinner"></div>
+                        <p>Loading plans...</p>
+                    </div>
+                    <table id="plans-table" class="admin-table" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Duration</th>
+                                <th>Price</th>
+                                <th>Discount</th>
+                                <th>Popular</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="plans-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscriptions Tab -->
+        <div id="subscriptions-tab" class="tab-content">
+            <div class="toolbar">
+                <div class="search-box">
+                    <input type="text" id="subscription-search" class="form-control"
+                        placeholder="Search by user name or email...">
+                </div>
+                <div class="filter-group">
+                    <select id="subscription-filter" class="form-control">
+                        <option value="">All Subscriptions</option>
+                        <option value="Active">Active</option>
+                        <option value="Expired">Expired</option>
+                        <option value="Expiring">Expiring Soon</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <div class="card-header">
+                    <h3 class="card-title">Active Subscriptions</h3>
+                    <span id="subscription-count" class="badge badge-info">0 subscriptions</span>
+                </div>
+                <div class="card-body">
+                    <div id="loading-subscriptions" class="loading">
+                        <div class="spinner"></div>
+                        <p>Loading subscriptions...</p>
+                    </div>
+                    <table id="subscriptions-table" class="admin-table" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Plan</th>
+                                <th>Start Date</th>
+                                <th>Expiry Date</th>
+                                <th>Days Left</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subscriptions-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Create Plan Modal -->
+    <div id="plan-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="plan-modal-title">Create Membership Plan</h3>
+                <button class="modal-close" onclick="closeModal('plan-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="plan-form">
+                    <input type="hidden" id="plan-id">
+
+                    <div class="form-group">
+                        <label class="form-label">Plan Name *</label>
+                        <input type="text" id="plan-name" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea id="plan-description" class="form-control" rows="2"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Duration (Months) *</label>
+                        <input type="number" id="plan-duration" class="form-control" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Price (VND) *</label>
+                        <input type="number" id="plan-price" class="form-control" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Original Price (VND)</label>
+                        <input type="number" id="plan-original-price" class="form-control" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            <input type="checkbox" id="plan-popular"> Mark as Popular
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            <input type="checkbox" id="plan-active" checked> Active
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-admin" onclick="closeModal('plan-modal')">Cancel</button>
+                <button class="btn-admin btn-primary" id="save-plan-btn" onclick="savePlan()">Save Plan</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/env.js"></script>
+    <script src="js/admin-utils.js"></script>
+    <script>
+        AdminUtils.requireAuth();
+        document.getElementById('admin-name').textContent = AdminUtils.getEmail() || 'Admin';
+
+        let allPlans = [];
+        let allSubscriptions = [];
+
+        // Tab switching
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            event.target.classList.add('active');
+            document.getElementById(`${tab}-tab`).classList.add('active');
+
+            if (tab === 'subscriptions' && allSubscriptions.length === 0) {
+                loadSubscriptions();
+            }
+        }
+
+        // Load Plans
+        async function loadPlans() {
+            try {
+                const response = await AdminUtils.apiRequest('/api/memberships');
+                if (response.ok) {
+                    allPlans = await response.json();
+                    renderPlans(allPlans);
+                    document.getElementById('loading-plans').style.display = 'none';
+                    document.getElementById('plans-table').style.display = 'table';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                AdminUtils.showToast('Failed to load plans', 'error');
+            }
+        }
+
+        function renderPlans(plans) {
+            const tbody = document.getElementById('plans-tbody');
+            document.getElementById('plan-count').textContent = `${plans.length} plans`;
+
+            tbody.innerHTML = plans.map(p => `
+                <tr>
+                    <td><strong>#${p.id}</strong></td>
+                    <td><strong>${p.name}</strong></td>
+                    <td>${p.durationMonths} month${p.durationMonths > 1 ? 's' : ''}</td>
+                    <td>${AdminUtils.formatCurrency(p.price)}</td>
+                    <td>
+                        ${p.originalPrice && p.discountPercentage
+                    ? `<span class="badge badge-success">${p.discountPercentage}% OFF</span>`
+                    : '<span class="badge badge-info">No Discount</span>'}
+                    </td>
+                    <td>
+                        ${p.isPopular
+                    ? '<i class="fa fa-star" style="color: #FFD700;"></i>'
+                    : '-'}
+                    </td>
+                    <td>
+                        ${p.isActive
+                    ? '<span class="badge badge-success">Active</span>'
+                    : '<span class="badge badge-danger">Inactive</span>'}
+                    </td>
+                    <td>
+                        <button class="btn-admin btn-sm btn-primary" onclick="editPlan(${p.id})">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function showCreatePlanModal() {
+            document.getElementById('plan-modal-title').textContent = 'Create Membership Plan';
+            document.getElementById('plan-form').reset();
+            document.getElementById('plan-id').value = '';
+            document.getElementById('plan-modal').classList.add('show');
+        }
+
+        async function editPlan(id) {
+            const plan = allPlans.find(p => p.id === id);
+            if (!plan) return;
+
+            document.getElementById('plan-modal-title').textContent = 'Edit Membership Plan';
+            document.getElementById('plan-id').value = plan.id;
+            document.getElementById('plan-name').value = plan.name;
+            document.getElementById('plan-description').value = plan.description || '';
+            document.getElementById('plan-duration').value = plan.durationMonths;
+            document.getElementById('plan-price').value = plan.price;
+            document.getElementById('plan-original-price').value = plan.originalPrice || '';
+            document.getElementById('plan-popular').checked = plan.isPopular;
+            document.getElementById('plan-active').checked = plan.isActive;
+            document.getElementById('plan-modal').classList.add('show');
+        }
+
+        async function savePlan() {
+            const id = document.getElementById('plan-id').value;
+            const data = {
+                name: document.getElementById('plan-name').value,
+                description: document.getElementById('plan-description').value,
+                durationMonths: parseInt(document.getElementById('plan-duration').value),
+                price: parseFloat(document.getElementById('plan-price').value),
+                originalPrice: parseFloat(document.getElementById('plan-original-price').value) || null,
+                isPopular: document.getElementById('plan-popular').checked,
+                isActive: document.getElementById('plan-active').checked
+            };
+
+            const btn = document.getElementById('save-plan-btn');
+            AdminUtils.setLoading(btn, true);
+
+            try {
+                const method = id ? 'PUT' : 'POST';
+                const endpoint = id ? `/api/admin/memberships/plans/${id}` : '/api/admin/memberships/plans';
+
+                const response = await AdminUtils.apiRequest(endpoint, {
+                    method,
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    AdminUtils.showToast(id ? 'Plan updated!' : 'Plan created!', 'success');
+                    closeModal('plan-modal');
+                    loadPlans();
+                }
+            } catch (error) {
+                AdminUtils.showToast('Failed to save plan', 'error');
+            } finally {
+                AdminUtils.setLoading(btn, false);
+            }
+        }
+
+        // Load Subscriptions
+        async function loadSubscriptions() {
+            try {
+                const response = await AdminUtils.apiRequest('/api/admin/memberships/subscriptions');
+                if (response.ok) {
+                    allSubscriptions = await response.json();
+                    renderSubscriptions(allSubscriptions);
+                    document.getElementById('loading-subscriptions').style.display = 'none';
+                    document.getElementById('subscriptions-table').style.display = 'table';
+                } else {
+                    // Show mock data for demo
+                    allSubscriptions = [];
+                    renderSubscriptions(allSubscriptions);
+                    document.getElementById('loading-subscriptions').style.display = 'none';
+                    document.getElementById('subscriptions-table').style.display = 'table';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                allSubscriptions = [];
+                renderSubscriptions(allSubscriptions);
+                document.getElementById('loading-subscriptions').style.display = 'none';
+                document.getElementById('subscriptions-table').style.display = 'table';
+            }
+        }
+
+        function renderSubscriptions(subscriptions) {
+            const tbody = document.getElementById('subscriptions-tbody');
+            document.getElementById('subscription-count').textContent = `${subscriptions.length} subscriptions`;
+
+            if (subscriptions.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: rgba(255,255,255,0.5);">No subscriptions found</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = subscriptions.map(s => {
+                const daysLeft = calculateDaysLeft(s.expiryDate);
+                return `
+                    <tr>
+                        <td>${s.userName || s.userEmail}</td>
+                        <td>${s.planName}</td>
+                        <td>${AdminUtils.formatDate(s.startDate)}</td>
+                        <td>${AdminUtils.formatDate(s.expiryDate)}</td>
+                        <td>
+                            <span class="badge ${daysLeft < 7 ? 'badge-warning' : 'badge-info'}">
+                                ${daysLeft} days
+                            </span>
+                        </td>
+                        <td>${AdminUtils.getStatusBadge(s.status)}</td>
+                        <td>
+                            <button class="btn-admin btn-sm btn-primary" onclick="viewSubscription(${s.id})">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function calculateDaysLeft(expiryDate) {
+            const expiry = new Date(expiryDate);
+            const today = new Date();
+            const diff = Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
+            return diff > 0 ? diff : 0;
+        }
+
+        function viewSubscription(id) {
+            AdminUtils.showToast('Subscription details coming soon', 'info');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPlans);
+    </script>
+</body>
+
+</html>

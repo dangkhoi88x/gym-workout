@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - GYM ANGEL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+    <!-- Sidebar -->
+    <nav class="admin-sidebar">
+        <div class="admin-logo">
+            <h2><i class="fa fa-dumbbell"></i> GYM ANGEL</h2>
+            <span class="badge">ADMIN</span>
+        </div>
+        <div class="admin-nav">
+            <a href="admin-dashboard.html" class="admin-nav-item active">
+                <i class="fa fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="admin-products.html" class="admin-nav-item">
+                <i class="fa fa-box"></i>
+                <span>Products</span>
+            </a>
+            <a href="admin-orders.html" class="admin-nav-item">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Orders</span>
+            </a>
+            <a href="admin-users.html" class="admin-nav-item">
+                <i class="fa fa-users"></i>
+                <span>Users</span>
+            </a>
+            <a href="admin-memberships.html" class="admin-nav-item">
+                <i class="fa fa-id-card"></i>
+                <span>Memberships</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Header -->
+        <header class="admin-header">
+            <h1><i class="fa fa-chart-line"></i> Dashboard</h1>
+            <div class="admin-user">
+                <div class="admin-user-info">
+                    <div class="admin-user-name" id="admin-name">Admin</div>
+                    <div class="admin-user-role">Administrator</div>
+                </div>
+                <button class="btn-logout" onclick="AdminUtils.logout()">
+                    <i class="fa fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div id="stats-section" class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-value" id="total-revenue">0</div>
+                        <div class="stat-label">Total Revenue</div>
+                    </div>
+                    <div class="stat-icon revenue">
+                        <i class="fa fa-dollar-sign"></i>
+                    </div>
+                </div>
+                <div class="stat-change positive" id="revenue-change">
+                    <i class="fa fa-arrow-up"></i> +12% this month
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-value" id="total-orders">0</div>
+                        <div class="stat-label">Total Orders</div>
+                    </div>
+                    <div class="stat-icon orders">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="stat-change positive" id="orders-change">
+                    <i class="fa fa-arrow-up"></i> +8% this month
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-value" id="active-members">0</div>
+                        <div class="stat-label">Active Members</div>
+                    </div>
+                    <div class="stat-icon members">
+                        <i class="fa fa-users"></i>
+                    </div>
+                </div>
+                <div class="stat-change positive" id="members-change">
+                    <i class="fa fa-arrow-up"></i> +15 new this month
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-value" id="low-stock">0</div>
+                        <div class="stat-label">Low Stock Alerts</div>
+                    </div>
+                    <div class="stat-icon stock">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+                <div class="stat-change" id="stock-info">
+                    <i class="fa fa-info-circle"></i> Requires attention
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="admin-card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fa fa-clock"></i> Recent Orders</h3>
+                <a href="admin-orders.html" class="btn-admin btn-primary btn-sm">View All</a>
+            </div>
+            <div class="card-body">
+                <div id="loading-orders" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading orders...</p>
+                </div>
+                <table id="orders-table" class="admin-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody">
+                        <!-- Dynamic content -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Low Stock Products -->
+        <div class="admin-card">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fa fa-box-open"></i> Low Stock Products</h3>
+                <a href="admin-products.html" class="btn-admin btn-warning btn-sm">Manage Products</a>
+            </div>
+            <div class="card-body">
+                <div id="loading-products" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading products...</p>
+                </div>
+                <table id="products-table" class="admin-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-tbody">
+                        <!-- Dynamic content -->
+                    </tbody>
+                </table>
+                <div id="no-low-stock"
+                    style="display: none; text-align: center; padding: 40px; color: rgba(255,255,255,0.5);">
+                    <i class="fa fa-check-circle" style="font-size: 3rem; color: #4CAF50;"></i>
+                    <p style="margin-top: 15px;">All products have sufficient stock!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/env.js"></script>
+    <script src="js/admin-utils.js"></script>
+    <script>
+        // Check authentication
+        AdminUtils.requireAuth();
+
+        // Display admin email
+        document.getElementById('admin-name').textContent = AdminUtils.getEmail() || 'Admin';
+
+        // Load dashboard data
+        async function loadDashboard() {
+            try {
+                // Load stats (mock data for now - will connect to actual API)
+                loadStats();
+
+                // Load recent orders
+                await loadRecentOrders();
+
+                // Load low stock products
+                await loadLowStockProducts();
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+                AdminUtils.showToast('Failed to load dashboard data', 'error');
+            }
+        }
+
+        function loadStats() {
+            // Mock data - replace with actual API calls
+            document.getElementById('total-revenue').textContent = '50M';
+            document.getElementById('total-orders').textContent = '245';
+            document.getElementById('active-members').textContent = '180';
+            document.getElementById('low-stock').textContent = '5';
+        }
+
+        async function loadRecentOrders() {
+            try {
+                const response = await AdminUtils.apiRequest('/api/orders');
+
+                if (response.ok) {
+                    const orders = await response.json();
+                    const recentOrders = orders.slice(0, 5); // Top 5
+
+                    const tbody = document.getElementById('orders-tbody');
+                    tbody.innerHTML = recentOrders.map(order => `
+                        <tr>
+                            <td><strong>${order.orderNumber || order.id}</strong></td>
+                            <td>${order.deliveryName || 'N/A'}</td>
+                            <td>${AdminUtils.formatDate(order.orderDate)}</td>
+                            <td>${AdminUtils.formatCurrency(order.totalAmount)}</td>
+                            <td>${AdminUtils.getStatusBadge(order.status)}</td>
+                            <td>
+                                <a href="admin-orders.html?id=${order.id}" class="btn-admin btn-sm btn-primary">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    `).join('');
+
+                    document.getElementById('loading-orders').style.display = 'none';
+                    document.getElementById('orders-table').style.display = 'table';
+                }
+            } catch (error) {
+                console.error('Error loading orders:', error);
+                document.getElementById('loading-orders').innerHTML = '<p style="color: #F44336;">Failed to load orders</p>';
+            }
+        }
+
+        async function loadLowStockProducts() {
+            try {
+                const response = await AdminUtils.apiRequest('/api/products');
+
+                if (response.ok) {
+                    const products = await response.json();
+                    const lowStock = products.filter(p => p.stockQuantity < 10);
+
+                    if (lowStock.length === 0) {
+                        document.getElementById('loading-products').style.display = 'none';
+                        document.getElementById('no-low-stock').style.display = 'block';
+                        return;
+                    }
+
+                    const tbody = document.getElementById('products-tbody');
+                    tbody.innerHTML = lowStock.map(product => `
+                        <tr>
+                            <td><strong>${product.name}</strong></td>
+                            <td>${product.category || 'N/A'}</td>
+                            <td>
+                                <span class="badge ${product.stockQuantity === 0 ? 'badge-danger' : 'badge-warning'}">
+                                    ${product.stockQuantity} left
+                                </span>
+                            </td>
+                            <td>${AdminUtils.formatCurrency(product.price)}</td>
+                            <td>
+                                <a href="admin-products.html?id=${product.id}" class="btn-admin btn-sm btn-warning">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    `).join('');
+
+                    document.getElementById('loading-products').style.display = 'none';
+                    document.getElementById('products-table').style.display = 'table';
+                }
+            } catch (error) {
+                console.error('Error loading products:', error);
+                document.getElementById('loading-products').innerHTML = '<p style="color: #F44336;">Failed to load products</p>';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadDashboard);
+    </script>
+</body>
+
+</html>

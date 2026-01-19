@@ -51,12 +51,12 @@ builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<EmailService>();
 
 // Cart Services
-builder.Services.AddScoped<GymAngel.Data.Repositories.ICartRepository, GymAngel.Data.Repositories.CartRepository>();
-builder.Services.AddScoped<GymAngel.Business.Services.Cart.ICartService, GymAngel.Business.Services.Cart.CartService>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddScoped<ICartService, CartService>();
 
 // Order Services
-builder.Services.AddScoped<GymAngel.Data.Repositories.IOrderRepository, GymAngel.Data.Repositories.OrderRepository>();
-builder.Services.AddScoped<GymAngel.Business.Services.Order.IOrderService, GymAngel.Business.Services.Order.OrderService>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 // Membership Services
 builder.Services.AddScoped<GymAngel.Data.Repositories.IMembershipRepository, GymAngel.Data.Repositories.MembershipRepository>();

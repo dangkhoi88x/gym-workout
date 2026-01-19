@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - GYM ANGEL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .login-container {
+            background: rgba(42, 42, 42, 0.95);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 50px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo h1 {
+            color: #FFD700;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .logo .badge {
+            background: #FFD700;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #FFD700;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .error-message {
+            background: rgba(244, 67, 54, 0.2);
+            border: 1px solid #F44336;
+            color: #F44336;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <h1><i class="fa fa-dumbbell"></i> GYM ANGEL</h1>
+            <span class="badge">ADMIN PORTAL</span>
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" placeholder="admin@gymangel.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password"><i class="fa fa-lock"></i> Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="btn-login" id="login-btn">
+                <i class="fa fa-sign-in-alt"></i> Sign In to Admin Panel
+            </button>
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2026 Gym Angel Admin Portal</p>
+            <p><a href="../index.html"><i class="fa fa-arrow-left"></i> Back to Main Site</a></p>
+        </div>
+    </div>
+
+    <script src="js/env.js"></script>
+    <script>
+        const API_BASE = window.__ENV__.API_BASE;
+        const loginForm = document.getElementById('login-form');
+        const loginBtn = document.getElementById('login-btn');
+        const errorMessage = document.getElementById('error-message');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Disable button
+            loginBtn.disabled = true;
+            loginBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Signing in...';
+            errorMessage.style.display = 'none';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/auth/signin`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.token) {
+                    // Save token
+                    localStorage.setItem('gymangel_admin_token', data.token);
+                    localStorage.setItem('gymangel_admin_email', email);
+
+                    // Redirect to dashboard
+                    window.location.href = 'admin-dashboard.html';
+                } else {
+                    throw new Error(data.message || 'Invalid credentials');
+                }
+            } catch (error) {
+                errorMessage.textContent = error.message || 'Login failed. Please check your credentials.';
+                errorMessage.style.display = 'block';
+
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = '<i class="fa fa-sign-in-alt"></i> Sign In to Admin Panel';
+            }
+        });
+
+        // Auto-fill for demo (remove in production)
+        if (window.location.hostname === 'localhost') {
+            document.getElementById('email').value = 'admin@gymangel.com';
+            document.getElementById('password').value = 'Admin@123';
+        }
+    </script>
+</body>
+
+</html>
